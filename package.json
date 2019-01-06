@@ -1,0 +1,96 @@
+{
+  "name": "cmild",
+  "version": "1.0.0",
+  "description": "Class methods invocation logging decorator",
+  "files": [
+    "build"
+  ],
+  "keywords": [
+    "class",
+    "decorator",
+    "invocation",
+    "logger",
+    "logging",
+    "reflection",
+    "introspection"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LordotU/cmild.git"
+  },
+  "license": "MIT",
+  "author": "Oleg Levshin <LevshinO@gmail.com>",
+  "main": "build/node.js",
+  "browser": "build/browser.js",
+  "scripts": {
+    "build": "CMILD_BROWSER=true yarn rollup -c && yarn rollup -c",
+    "lint": "eslint -c ./.eslintrc.js ./src",
+    "pre-commit": "lint-staged",
+    "prepare": "rm build/*; yarn build",
+    "test": "yarn test:jest && yarn test:coverage",
+    "test:jest": "yarn jest",
+    "test:coverage": "cat ./__tests__/coverage/lcov.info | yarn coveralls"
+  },
+  "config": {
+    "pre-git": {
+      "allow-untracked-files": true,
+      "pre-commit": [
+        "yarn pre-commit"
+      ]
+    }
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "<rootDir>/__tests__/coverage",
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/__tests__/"
+    ],
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "html"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/__tests__/coverage/",
+      "<rootDir>/__tests__/mocks/"
+    ],
+    "verbose": false
+  },
+  "dependencies": {
+    "colors": "^1.3.3",
+    "lodash.get": "^4.4.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-decorators": "^7.2.3",
+    "@babel/preset-env": "^7.2.3",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "coveralls": "^3.0.2",
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "jest": "^23.6.0",
+    "jest-mock-console": "^0.4.2",
+    "lint-staged": "^8.1.0",
+    "pre-git": "^3.17.1",
+    "regenerator-runtime": "^0.13.1",
+    "rollup": "^1.0.2",
+    "rollup-plugin-babel": "^4.2.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-replace": "^2.1.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn eslint -c ./.eslintrc.js",
+      "git add"
+    ]
+  },
+  "release": {
+    "analyzeCommits": "simple-commit-message"
+  }
+}
