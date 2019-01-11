@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cmild for Node With params Logs async methods 1`] = `
+Array [
+  Array [
+    "[44m[37m[3mTestClass#testMethod2 arguments:[23m[39m[49m %O",
+    Array [
+      "testArgValue1",
+      "testArgValue2",
+    ],
+  ],
+  Array [
+    "[42m[37m[3mTestClass#testMethod2 result:[23m[39m[49m %O",
+    "testArgValue1 testArgValue2",
+  ],
+  Array [
+    "[44m[37m[3mTestClass#erroredMethod2 arguments:[23m[39m[49m %O",
+    Array [
+      "erroredArgValue1",
+      "erroredArgValue2",
+    ],
+  ],
+  Array [
+    "[44m[37m[3mTestClass#testMethod2 arguments:[23m[39m[49m %O",
+    Array [
+      "erroredArgValue1",
+      "erroredArgValue2",
+    ],
+  ],
+  Array [
+    "[42m[37m[3mTestClass#testMethod2 result:[23m[39m[49m %O",
+    "erroredArgValue1 erroredArgValue2",
+  ],
+  Array [
+    "[41m[37m[3mTestClass#erroredMethod2 error:[23m[39m[49m %O",
+    [Error: erroredArgValue1 erroredArgValue2],
+  ],
+]
+`;
+
+exports[`Cmild for Node With params Logs non-async methods 1`] = `
+Array [
+  Array [
+    "[44m[37m[3mTestClass#testMethod1 arguments:[23m[39m[49m %O",
+    Array [
+      "testArgValue",
+    ],
+  ],
+  Array [
+    "[42m[37m[3mTestClass#testMethod1 result:[23m[39m[49m %O",
+    "testArgValue",
+  ],
+  Array [
+    "[44m[37m[3mTestClass#erroredMethod1 arguments:[23m[39m[49m %O",
+    Array [
+      "erroredArgValue",
+    ],
+  ],
+  Array [
+    "[44m[37m[3mTestClass#testMethod1 arguments:[23m[39m[49m %O",
+    Array [
+      "erroredArgValue",
+    ],
+  ],
+  Array [
+    "[42m[37m[3mTestClass#testMethod1 result:[23m[39m[49m %O",
+    "erroredArgValue",
+  ],
+  Array [
+    "[41m[37m[3mTestClass#erroredMethod1 error:[23m[39m[49m %O",
+    [Error: erroredArgValue],
+  ],
+]
+`;
+
+exports[`Cmild for Node Without params Logs async methods 1`] = `
+Array [
+  Array [
+    "[40m[34m[1mTestClass#testMethod2 arguments:[22m[39m[49m %O",
+    Array [
+      "testArgValue1",
+      "testArgValue2",
+    ],
+  ],
+  Array [
+    "[40m[32m[1mTestClass#testMethod2 result:[22m[39m[49m %O",
+    "testArgValue1 testArgValue2",
+  ],
+  Array [
+    "[40m[34m[1mTestClass#erroredMethod2 arguments:[22m[39m[49m %O",
+    Array [
+      "erroredArgValue1",
+      "erroredArgValue2",
+    ],
+  ],
+  Array [
+    "[40m[34m[1mTestClass#testMethod2 arguments:[22m[39m[49m %O",
+    Array [
+      "erroredArgValue1",
+      "erroredArgValue2",
+    ],
+  ],
+  Array [
+    "[40m[32m[1mTestClass#testMethod2 result:[22m[39m[49m %O",
+    "erroredArgValue1 erroredArgValue2",
+  ],
+  Array [
+    "[40m[31m[1mTestClass#erroredMethod2 error:[22m[39m[49m %O",
+    [Error: erroredArgValue1 erroredArgValue2],
+  ],
+]
+`;
+
+exports[`Cmild for Node Without params Logs non-async methods 1`] = `
+Array [
+  Array [
+    "[40m[34m[1mTestClass#testMethod1 arguments:[22m[39m[49m %O",
+    Array [
+      "testArgValue",
+    ],
+  ],
+  Array [
+    "[40m[32m[1mTestClass#testMethod1 result:[22m[39m[49m %O",
+    "testArgValue",
+  ],
+  Array [
+    "[40m[34m[1mTestClass#erroredMethod1 arguments:[22m[39m[49m %O",
+    Array [
+      "erroredArgValue",
+    ],
+  ],
+  Array [
+    "[40m[34m[1mTestClass#testMethod1 arguments:[22m[39m[49m %O",
+    Array [
+      "erroredArgValue",
+    ],
+  ],
+  Array [
+    "[40m[32m[1mTestClass#testMethod1 result:[22m[39m[49m %O",
+    "erroredArgValue",
+  ],
+  Array [
+    "[40m[31m[1mTestClass#erroredMethod1 error:[22m[39m[49m %O",
+    [Error: erroredArgValue],
+  ],
+]
+`;

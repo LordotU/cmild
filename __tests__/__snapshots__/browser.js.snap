@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cmild for Browser With params Logs async methods 1`] = `
+Array [
+  Array [
+    "%c TestClass#testMethod2 given arguments: %O",
+    "background: #03A9F4; color: #FFFFFF; font-weight: italic",
+    Array [
+      "testArgValue1",
+      "testArgValue2",
+    ],
+  ],
+  Array [
+    "%c TestClass#testMethod2 result: %O",
+    "background: #4CAF50; color: #FFFFFF; font-weight: italic",
+    "testArgValue1 testArgValue2",
+  ],
+  Array [
+    "%c TestClass#erroredMethod2 given arguments: %O",
+    "background: #03A9F4; color: #FFFFFF; font-weight: italic",
+    Array [
+      "erroredArgValue1",
+      "erroredArgValue2",
+    ],
+  ],
+  Array [
+    "%c TestClass#testMethod2 given arguments: %O",
+    "background: #03A9F4; color: #FFFFFF; font-weight: italic",
+    Array [
+      "erroredArgValue1",
+      "erroredArgValue2",
+    ],
+  ],
+  Array [
+    "%c TestClass#testMethod2 result: %O",
+    "background: #4CAF50; color: #FFFFFF; font-weight: italic",
+    "erroredArgValue1 erroredArgValue2",
+  ],
+  Array [
+    "%c TestClass#erroredMethod2 error: %O",
+    "background: #F20404; color: #FFFFFF; font-weight: italic",
+    [Error: erroredArgValue1 erroredArgValue2],
+  ],
+]
+`;
+
+exports[`Cmild for Browser With params Logs non-async methods 1`] = `
+Array [
+  Array [
+    "%c TestClass#testMethod1 given arguments: %O",
+    "background: #03A9F4; color: #FFFFFF; font-weight: italic",
+    Array [
+      "testArgValue",
+    ],
+  ],
+  Array [
+    "%c TestClass#testMethod1 result: %O",
+    "background: #4CAF50; color: #FFFFFF; font-weight: italic",
+    "testArgValue",
+  ],
+  Array [
+    "%c TestClass#erroredMethod1 given arguments: %O",
+    "background: #03A9F4; color: #FFFFFF; font-weight: italic",
+    Array [
+      "erroredArgValue",
+    ],
+  ],
+  Array [
+    "%c TestClass#testMethod1 given arguments: %O",
+    "background: #03A9F4; color: #FFFFFF; font-weight: italic",
+    Array [
+      "erroredArgValue",
+    ],
+  ],
+  Array [
+    "%c TestClass#testMethod1 result: %O",
+    "background: #4CAF50; color: #FFFFFF; font-weight: italic",
+    "erroredArgValue",
+  ],
+  Array [
+    "%c TestClass#erroredMethod1 error: %O",
+    "background: #F20404; color: #FFFFFF; font-weight: italic",
+    [Error: erroredArgValue],
+  ],
+]
+`;
+
+exports[`Cmild for Browser Without params Logs async methods 1`] = `
+Array [
+  Array [
+    "%c TestClass#testMethod2 given arguments: %O",
+    "background: #F2EAFF; color: #03A9F4; font-weight: bold",
+    Array [
+      "testArgValue1",
+      "testArgValue2",
+    ],
+  ],
+  Array [
+    "%c TestClass#testMethod2 result: %O",
+    "background: #F2EAFF; color: #4CAF50; font-weight: bold",
+    "testArgValue1 testArgValue2",
+  ],
+  Array [
+    "%c TestClass#erroredMethod2 given arguments: %O",
+    "background: #F2EAFF; color: #03A9F4; font-weight: bold",
+    Array [
+      "erroredArgValue1",
+      "erroredArgValue2",
+    ],
+  ],
+  Array [
+    "%c TestClass#testMethod2 given arguments: %O",
+    "background: #F2EAFF; color: #03A9F4; font-weight: bold",
+    Array [
+      "erroredArgValue1",
+      "erroredArgValue2",
+    ],
+  ],
+  Array [
+    "%c TestClass#testMethod2 result: %O",
+    "background: #F2EAFF; color: #4CAF50; font-weight: bold",
+    "erroredArgValue1 erroredArgValue2",
+  ],
+  Array [
+    "%c TestClass#erroredMethod2 error: %O",
+    "background: #F2EAFF; color: #F20404; font-weight: bold",
+    [Error: erroredArgValue1 erroredArgValue2],
+  ],
+]
+`;
+
+exports[`Cmild for Browser Without params Logs non-async methods 1`] = `
+Array [
+  Array [
+    "%c TestClass#testMethod1 given arguments: %O",
+    "background: #F2EAFF; color: #03A9F4; font-weight: bold",
+    Array [
+      "testArgValue",
+    ],
+  ],
+  Array [
+    "%c TestClass#testMethod1 result: %O",
+    "background: #F2EAFF; color: #4CAF50; font-weight: bold",
+    "testArgValue",
+  ],
+  Array [
+    "%c TestClass#erroredMethod1 given arguments: %O",
+    "background: #F2EAFF; color: #03A9F4; font-weight: bold",
+    Array [
+      "erroredArgValue",
+    ],
+  ],
+  Array [
+    "%c TestClass#testMethod1 given arguments: %O",
+    "background: #F2EAFF; color: #03A9F4; font-weight: bold",
+    Array [
+      "erroredArgValue",
+    ],
+  ],
+  Array [
+    "%c TestClass#testMethod1 result: %O",
+    "background: #F2EAFF; color: #4CAF50; font-weight: bold",
+    "erroredArgValue",
+  ],
+  Array [
+    "%c TestClass#erroredMethod1 error: %O",
+    "background: #F2EAFF; color: #F20404; font-weight: bold",
+    [Error: erroredArgValue],
+  ],
+]
+`;
