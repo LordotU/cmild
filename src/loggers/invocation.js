@@ -9,7 +9,7 @@ export default function logInvocation (classMethod, styles, ...args) {
   if (process.browser) {
     console.debug(
       `%c ${classMethod} given arguments: %O`,
-      typeof styles === 'string' && !! styles ? styles : 'background: #F2EAFF; color: #03A9F4; font-weight: bold',
+      styles,
       [...args],
     )
   } else {
@@ -17,8 +17,12 @@ export default function logInvocation (classMethod, styles, ...args) {
     const _get = require('lodash.get')
     const _styles = _get(colors, styles)
 
+    if (typeof _styles !== 'function') {
+      throw TypeError(`Cannot find given style chain '${styles}' in colors.js!`)
+    }
+
     console.debug(
-      `${(_styles || colors.bgBlack.blue.bold)(`${classMethod} arguments:`)} %O`,
+      `${_styles(`${classMethod} arguments:`)} %O`,
       [...args],
     )
   }

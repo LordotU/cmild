@@ -9,7 +9,7 @@ export default function logResult (classMethod, styles, result) {
   if (process.browser) {
     console.debug(
       `%c ${classMethod} result: %O`,
-      typeof styles === 'string' && !! styles ? styles : 'background: #F2EAFF; color: #4CAF50; font-weight: bold',
+      styles,
       result,
     )
   } else {
@@ -17,8 +17,12 @@ export default function logResult (classMethod, styles, result) {
     const _get = require('lodash.get')
     const _styles = _get(colors, styles)
 
+    if (typeof _styles !== 'function') {
+      throw TypeError(`Cannot find given style chain '${styles}' in colors.js!`)
+    }
+
     console.debug(
-      `${(_styles || colors.bgBlack.green.bold)(`${classMethod} result:`)} %O`,
+      `${_styles(`${classMethod} result:`)} %O`,
       result,
     )
   }

@@ -26,33 +26,44 @@ yarn test # yarn test:jest && yarn test:coverage
 You may decorate your class with default styles params, which are:
 
 ```javascript
-  {
-    styles: {
-      browser: {
-        invocation: 'background: #F2EAFF; color: #03A9F4; font-weight: bold',
-        result: 'background: #F2EAFF; color: #4CAF50; font-weight: bold',
-        error: 'background: #F2EAFF; color: #F20404; font-weight: bold',
-      },
-      node: {
-        invocation: 'bgBlack.blue.bold',
-        result: 'bgBlack.green.bold',
-        error: 'bgBlack.red.bold',
-      }
+{
+  styles: {
+    browser: {
+      invocation: 'background: #F2EAFF; color: #03A9F4; font-weight: bold',
+      result: 'background: #F2EAFF; color: #4CAF50; font-weight: bold',
+      error: 'background: #F2EAFF; color: #F20404; font-weight: bold',
+    },
+    node: {
+      invocation: 'bgBlack.blue.bold',
+      result: 'bgBlack.green.bold',
+      error: 'bgBlack.red.bold',
     }
   }
+}
 ```
 
 Or set your own styles by passing object as a first argument of decorator, for example:
 
 ```javascript
-  @Cmild({
-    styles: {
-      browser: {
-        invocation: 'background: #F2EAFF; color: #FFEF00; font-weight: bold',
-      }
-    },
-  })
+@Cmild({
+  styles: {
+    browser: {
+      invocation: 'background: #F2EAFF; color: #FFEF00; font-weight: bold',
+    }
+  },
+})
 ```
+
+Also you may disable decorator in specific env/build, for example:
+
+```javascript
+@Cmild({
+  enabled: process.env.NODE_ENV !== production,
+})
+```
+
+Common usage:
+
 
 ```javascript
 import Cmild from 'cmild'

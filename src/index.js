@@ -18,6 +18,7 @@ export default function cmildOuter (param = {}) {
    * Class methods invocation logging decorator inner
    *
    * @param {Object}   [options.styles={}]
+   * @param {String}   [options.enabled=true]
    * @param {Object}   [options.styles.browser={}]
    * @param {String}   [options.styles.browser.invocation='background: #F2EAFF; color: #03A9F4; font-weight: bold']
    * @param {String}   [options.styles.browser.result='background: #F2EAFF; color: #4CAF50; font-weight: bold']
@@ -28,17 +29,28 @@ export default function cmildOuter (param = {}) {
    * @param {String}   [options.styles.node.error='bgBlack.red.bold']
    * @param {Function} target
    */
-  function cmildInner (options = {}, target) {
+  function cmildInner ({
+    enabled = true,
+    styles = {
+      browser: {
+        invocation: 'background: #F2EAFF; color: #03A9F4; font-weight: bold',
+        result: 'background: #F2EAFF; color: #4CAF50; font-weight: bold',
+        error: 'background: #F2EAFF; color: #F20404; font-weight: bold',
+      },
+      node: {
+        invocation: 'bgBlack.blue.bold',
+        result: 'bgBlack.green.bold',
+        error: 'bgBlack.red.bold',
+      },
+    },
+  } = {}, target) {
 
     if (typeof target !== 'function') {
       throw TypeError('`target` decorator param should be a class function!')
     }
 
-    const styles = {
-      browser: {},
-      node: {},
-
-      ...options.styles,
+    if (! enabled) {
+      return
     }
 
     for (const propertyName of Reflect.ownKeys(target.prototype)) {
