@@ -1,6 +1,7 @@
 # Class methods invocation logging decorator
 
 [![License](https://img.shields.io/badge/License-MIT-000000.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.org/LordotU/cmild.svg?branch=master)](https://travis-ci.org/LordotU/cmild)
 [![Coverage Status](https://coveralls.io/repos/github/LordotU/cmild/badge.svg)](https://coveralls.io/github/LordotU/cmild)
 
 ## Description
